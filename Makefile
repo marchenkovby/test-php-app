@@ -1,3 +1,5 @@
+ CONTAINER_NAME ?= test-php-app-backend
+
 # команда: make start
 start:
 	docker-compose up -d
@@ -9,3 +11,7 @@ rebuild:
 # команда: make stop
 stop:
 	docker-compose down
+
+# команда: make sh
+sh:
+	docker exec -it $(CONTAINER_NAME) sh
