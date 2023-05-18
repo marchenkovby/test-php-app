@@ -2,10 +2,21 @@ version: '3'
 
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: backend.Dockerfile
     container_name: test-php-app-backend
-    restart: always
     ports:
-      - '8081:80'
+      - '8000:80'
     volumes:
       - ./backend:/var/www/html
+  browser-sync:
+    build:
+      context: ./backend
+      dockerfile: browser-sync.Dockerfile
+    container_name: test-php-app-browser-sync
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./backend:/var/www/html
+    command: browser-sync start --proxy backend:80 --files "/var/www/html/**/*.php"
