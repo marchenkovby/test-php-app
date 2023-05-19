@@ -2,7 +2,6 @@
 
 namespace app;
 
-class B
+class B extends A
 {
-
 }
