@@ -1,10 +1,11 @@
 <?php
 
-use classes\Class1;
+use app\A;
+use app\B;
 
 $root = __DIR__ . '/..';
-
 require_once $root . '/vendor/autoload.php';
 
-$test = new Class1();
-echo $test->field;
+$a = new A();
+$a->doAction1()->doAction2();
+
