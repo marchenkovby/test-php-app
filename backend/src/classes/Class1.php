@@ -1,8 +1,8 @@
 <?php
 
-namespace classes;
+namespace app;
 
 class Class1 {
 
-  public $field = 'Test field from Class1';
+  public $field = '12';
 }
