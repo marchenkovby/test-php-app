@@ -10,3 +10,6 @@ $a = new A();
 $a->doAction1()->doAction2();
 
 echo 'test';
+
+echo 'test2ß';
+
