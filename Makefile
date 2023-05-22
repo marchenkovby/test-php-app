@@ -28,3 +28,5 @@ composer-update:
 # команда: make composer-autoload
 composer-dump-autoload:
 	docker exec -it $(CONTAINER_NAME) composer dump-autoload
+
+# тестовый комментарий
