@@ -8,5 +8,3 @@ require_once $root . '/vendor/autoload.php';
 
 $a = new A();
 $a->doAction1()->doAction2();
-
-echo 'test';
